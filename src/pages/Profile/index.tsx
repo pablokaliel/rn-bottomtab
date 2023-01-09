@@ -1,5 +1,6 @@
 import React from 'react';
-import { View,Text,StyleSheet } from 'react-native';
+import { View,Text } from 'react-native';
+import {styles} from './styles';
 
 
 export function Profile() {
@@ -10,10 +11,3 @@ export function Profile() {
   );
 }
 
-const styles = StyleSheet.create({
-Container:{
-  flex:1,
-  alignItems: 'center',
-  justifyContent:"center",
-}
-})

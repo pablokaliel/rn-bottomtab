@@ -1,6 +1,6 @@
-import React from 'react';
-import { View,Text,StyleSheet } from 'react-native';
-
+import React from "react";
+import { View, Text } from "react-native";
+import { styles } from "./styles";
 
 export function New() {
   return (
@@ -9,11 +9,3 @@ export function New() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-Container:{
-  flex:1,
-  alignItems: 'center',
-  justifyContent:"center",
-}
-})
