@@ -1,12 +1,38 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { SafeAreaView,View, Text, ScrollView,StatusBar } from "react-native";
 
 import { styles } from "./styles";
 
 export function Home() {
   return (
-    <View style={styles.Container}>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={styles.Container}>
+     <ScrollView>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+      <View style={styles.Content}>
+        <Text>Contéudo Home</Text>
+      </View>
+     </ScrollView>
+     <StatusBar/>
+    </SafeAreaView>
   );
 }

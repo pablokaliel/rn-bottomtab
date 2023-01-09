@@ -5,7 +5,7 @@ import { New } from "../pages/New";
 import { Notification } from "../pages/Notification";
 import { Profile } from "../pages/Profile";
 import { Search } from "../pages/Search";
-import { Entypo, Feather } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 import { ButtonNew } from "../components/ButtonNew";
 
 const { Screen, Navigator } = createBottomTabNavigator();
@@ -27,18 +27,24 @@ export default function Routes() {
         name="Inicio"
         component={Home}
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Entypo name="home" size={size} color={color} />
-          ),
+          tabBarIcon: ({ size, color, focused }) => {
+            if (focused) {
+              return <Ionicons name="home" size={size} color={color} />;
+            }
+            return <Ionicons name="home-outline" size={size} color={color} />;
+          },
         }}
       />
       <Screen
         name="Pesquisar"
         component={Search}
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Feather name="search" size={size} color={color} />
-          ),
+          tabBarIcon: ({ size, color, focused }) => {
+            if (focused) {
+              return <Ionicons name="search" size={size} color={color} />;
+            }
+            return <Ionicons name="search-outline" size={size} color={color} />;
+          },
         }}
       />
       <Screen
@@ -55,9 +61,20 @@ export default function Routes() {
         name="Notificação"
         component={Notification}
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Entypo name="notification" size={size} color={color} />
-          ),
+          tabBarIcon: ({ size, color, focused }) => {
+            if (focused) {
+              return (
+                <Ionicons name="notifications" size={size} color={color} />
+              );
+            }
+            return (
+              <Ionicons
+                name="notifications-outline"
+                size={size}
+                color={color}
+              />
+            );
+          },
         }}
       />
 
@@ -65,12 +82,14 @@ export default function Routes() {
         name="Perfil"
         component={Profile}
         options={{
-          tabBarIcon: ({ size, color }) => (
-            <Feather name="user" size={size} color={color} />
-          ),
+          tabBarIcon: ({ size, color, focused }) => {
+            if (focused) {
+              return <Ionicons name="person" size={size} color={color} />;
+            }
+            return <Ionicons name="person-outline" size={size} color={color} />;
+          },
         }}
       />
     </Navigator>
   );
 }
- 
