@@ -17,8 +17,9 @@ export function Notification() {
 
       <Modal
         visible={visibleModal}
-        transparent={true}
+        transparent={false}
         onRequestClose={() => setVisibleModal(false)}
+        animationType="slide"
       >
         <ActionModal
           handleClose={() => setVisibleModal(false)}
